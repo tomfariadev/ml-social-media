@@ -3,7 +3,7 @@
 
 ![Dashboard](print.PNG)
 
-##Este projeto utiliza Machine Learning para analisar e prever o comportamento de usuários no Instagram. Ele resolve dois problemas principais:
+## Este projeto utiliza Machine Learning para analisar e prever o comportamento de usuários no Instagram. Ele resolve dois problemas principais:
 - **Regressão**: Prever quantos minutos um usuário passará na plataforma com base em seu perfil.
 - **Classificação**: Identificar qual tipo de conteúdo (Reels, Stories ou Fotos) o usuário prefere.
 
