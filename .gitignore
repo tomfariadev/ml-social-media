@@ -1,0 +1,6 @@
+venv/
+.venv/
+lib/
+__pycache__/
+*.pyc
+pitch-30.txt
