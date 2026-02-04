@@ -56,12 +56,12 @@ def main():
             with col2:
                 st.metric(label="(R2 Score) Precisão", value=f"{r2:.2f}")
 
-            st.divider()
+            st.markdown("---")
             fig = gr.plot_features(model, features)
             st.plotly_chart(fig, use_container_width=True) # use_container_width é o correto para Plotly
 
         # --- PREDIÇÃO ---
-        st.sidebar.divider()
+        st.sidebar.markdown("---")
         st.sidebar.markdown("### Gerar predição com base no perfil")
         idade = st.sidebar.slider("Idade", 13, 80, 25)
         genero = st.sidebar.selectbox("Gênero", ["Masculino", "Feminino"])
