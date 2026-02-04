@@ -3,10 +3,13 @@ import pandas as pd
 import data_cleaning as dc
 import logic as lo
 import graphics as gr
+import os
 
 @st.cache_data
 def load_data():
-    df = pd.read_parquet("data/instagram_users_lifestyle.parquet")
+    base_path = os.path.dirname(__file__)
+    file = os.path.join(base_path,"data", "instagram_users_lifestyle.parquet")
+    df = pd.read_parquet(file)
     return dc.cleaning(df)
 
 def main():
