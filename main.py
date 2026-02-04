@@ -15,7 +15,11 @@ def load_data():
         st.error(f"Arquivo não encontrado: {file}")
         return None
         
-    df = pd.read_parquet(file, engine='pyarrow') # Forçando o motor pyarrow
+    df = pd.read_parquet(file, engine='pyarrow')
+
+    if len(df) > 100000:
+        df = df.sample(n=100000, random_state=42)
+        
     return dc.cleaning(df)
 
 def main():
